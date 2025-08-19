@@ -1,11 +1,15 @@
-/* General Styles */
+* {
+  box-sizing: border-box;
+}
+
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'inter', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #fff;
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -21,14 +25,19 @@ a {
     color: inherit;
 }
 
-/* Header/Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 1;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .logo {
@@ -56,18 +65,17 @@ a {
     font-weight: 400;
 }
 
-/* Hero Section */
 .hero-section {
     position: relative;
     height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     background-color: #ffffff;
 }
 
 .hero-text {
+    padding-top: 160px;
     z-index: 1;
     text-align: center;
 }
@@ -107,44 +115,50 @@ a {
 
 .circle-blue {
     position: absolute;
-    top: -100px;
+    top: -50px;
     left: -100px;
-    width: 400px;
-    height: 400px;
-    background-color: #007bff;
+    width: 440px;
+    height: 440px;
+    background-color: #0F81D9;
     border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
 }
 
 .circle-grey {
     position: absolute;
-    bottom: -100px;
-    right: -100px;
-    width: 500px;
-    height: 500px;
-    background-color: #6c757d;
+    bottom: -490px;
+    right: -290px;
+    width: 700px;
+    height: 700px;
+    background-color: #5A5D60;
     border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
 }
 
-/* Features Section */
 .features-section {
-    padding: 100px 50px;
+    padding-top: 400px;
+    padding-bottom: 200px;
     background-color: #fff;
     text-align: center;
 }
 
 .circle-features-main {
+    margin: 80px auto;
+    right: 250px;
     position: relative;
-    width: 500px;
-    height: 500px;
+    width: 800px;
+    height: 800px;
     margin: 0 auto;
     border-radius: 50%;
-    background-color: #007bff;
+    background-color: #0F81D9;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
 }
 
 .feature-card {
     position: absolute;
     width: 200px;
     padding: 20px;
+    padding-right: 25px;
     background: #f8f9fa;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -152,30 +166,54 @@ a {
 }
 
 .feature-card.backup {
-    top: 50px;
-    left: -150px;
+    top: 40px;
+    right: -70px;
+}
+
+.img-3 {
+    position: relative;
+    width: 470px;
+    top: -100px;
+    left: 650px;
+    border-radius: 15px;
 }
 
 .feature-card.restore {
-    left: 150px;
-    top: 150px;
+    top: 400px;
+    left: 450px;
+}
+
+.img-1 {
+    position: relative;
+    width: 470px;
+    top: -82px;
+    left: -120px;
+    border-radius: 15px;
 }
 
 .feature-card.history {
-    bottom: 50px;
-    right: -150px;
+    bottom: -150px;
+    right: -70px;
+}
+
+.img-2 {
+    position: relative;
+    width: 470px;
+    top: -100px;
+    left: 650px;
+    border-radius: 15px;
 }
 
 .feature-card h3 {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 36px;
+    font-weight: 750;
     color: #007bff;
+    padding-right: -30px;
     margin-bottom: 10px;
 }
 
-/* Flow Section */
 .flow-section {
-    padding: 80px 50px;
+    padding: 210px 210px;
     background-color: #f0f2f5;
     text-align: center;
 }
@@ -203,15 +241,17 @@ a {
 }
 
 .step-2 img {
-    height: 80px;
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
 }
 
 .circle-number {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
     background-color: #6c757d;
     color: #fff;
     border-radius: 50%;
@@ -219,7 +259,6 @@ a {
     font-weight: 700;
 }
 
-/* Tabs Section */
 .tabs-section {
     padding: 80px 50px;
     background-color: #fff;
